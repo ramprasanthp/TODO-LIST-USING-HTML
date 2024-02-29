@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            text-align: center;
+            color: #3c88f7;
+            margin-bottom: 20px;
+        }
+
+        .input-section {
+            margin-bottom: 20px;
+        }
+
+        .input-label {
+            display: block;
+            margin-bottom: 10px;
+            color: #3c88f7;
+            font-size: 18px;
+        }
+
+        .input-field {
+            width: calc(100% - 90px);
+            padding: 10px;
+            border: 2px solid #3c88f7;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .add-button {
+            padding: 10px 20px;
+            background-color: #3c88f7;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-button:hover {
+            background-color: #306fd8;
+        }
+
+        .task-container {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .task {
+            background-color: #f0f0f0;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .task h4 {
+            margin: 0;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .delete-button {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 8px 15px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .delete-button:hover {
+            background-color: #d63a2f;
+        }
+    </style>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">ToDo List</h2>
+        <div class="input-section">
+            <label for="input" class="input-label">Enter the task</label>
+            <input id="input" type="text" class="input-field">
+            <button onclick="AddTask()" class="add-button">Add Task</button>
+        </div>
+        <div id="task-container" class="task-container">
+             <!-- Tasks will be dynamically added here -->
+        </div>
+    </div>
+</body>
+</html>
